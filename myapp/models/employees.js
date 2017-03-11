@@ -14,6 +14,6 @@ var Employees = sequelize.define('admins',
 
 //Employees.sync();
 
-console.log("Created original admin");
+//console.log("Created original admin");
 
 module.exports = Employees;

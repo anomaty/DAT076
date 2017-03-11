@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html>
-<body>
 <head>
-	<!-- script  -->
-	<script type="text/javascript" src="javascripts/sorttable.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/bookinglist.css"/>
-	<!-- title for tab -->
-	<title> Bookings </title>
+
+<div id ="header1">
 	<h1> List of all Bookings </h1>
+</div>
 </head>
-<!-- back button  -->
-<button class ="buttonback" onclick="goBack()"> Go Back</button>
-<!-- sortable table  -->
-<table class="sortable" id="tablebook" border="1" bordercolor="#000000"  width="400" cellpadding="3" cellspacing="3">
-  <tr>
-    <th width="150">Name</th>
-		<th width="150">Amount of seats</th>
-		<th width="150">Date booked</th>
-		<th width="150">Time booked</th>
-    <th width="150">Phone number</th>
-  </tr>
-	{{#bookinglist}}
-  <tr>
-		<td width="150" >{{name}}</td>
-		<td width="150">{{seats}}</td>
-    <td width="150">{{bookingdate}}</td>
-		<td width="150">{{bookingtime}}</td>
-		<td width="150">{{phone}}</td>
-		</tr>
-						{{/bookinglist}}
-</table>
-</body>
+<body>
+<button class ="buttonback" onclick="goBack()">Go Back</button>
+<!--<form action = "booklists/delete" method="POST"> -->
+<!--<input type="hidden" name="id" value="{{bookinglists.phone}}" /> 
+<button class ="deletbtn" id="deletebtn"> delete </button> 
+</form> -->
+<table id="booktablelist" class="display" cellspacing="0" width="100%">
+        <thead>
+              	<th>Customer name</th>
+                <th>Customer phone number</th>
+                <th>Reservation date</th>
+                <th>Reservation time</th>
+                <th>Amount of people</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Customer name</th>
+                <th>Phone number</th>
+                <th>Reservation date</th>
+                <th>Reservation time</th>
+                <th>Amount of people</th>
+            </tr>
+        </tfoot>
+        <tbody>
+						<tr>
+                <td>{{name}}</td>
+                <td>{{phone}}</td>
+                <td>{{bookingdate}}</td>
+                <td>{{bookingtime}}</td>
+                <td>{{seats}}</td>
+            </tr>
+			{{/bookinglist}}
+        </tbody>
+    </table>
+		</body>
 
 <!-- script for going back to admin page -->
 <script>
-function goBack() {
+    function goBack() {
     window.history.back("/admin-page");
 }
 </script>
-
+<!--scripts -->
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="javascripts/sorttable.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.min.css"> </script>
+	<!-- end of script-->
 </html>

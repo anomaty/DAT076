@@ -16,7 +16,7 @@ var Bookings = sequelize.define('Bookings',{
         allowNull: false,
     },
     bookingdate: {
-      type: Sequelize.STRING(11),
+      type: Sequelize.STRING(30),
       allowNull: false,
     },
     bookingtime: {

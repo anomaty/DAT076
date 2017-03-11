@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Varela|Oswald:400,700';
+
 /* Component styles */
 @font-face {
 	font-family: 'Blokk';
@@ -11,12 +13,10 @@
 
 h1 {
   color: #000000;
-  font-family: 'Lato', sans-serif;
-  font-size: 54px;
-  font-weight: 300;
-  line-height: 58px;
-  margin: 0 0 58px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
   text-align: center;
+  border: 2px solid darkgrey;
 }
 
 table {
@@ -38,7 +38,7 @@ td, th {
 		line-height: 1;
 	}
 th {
-    background-color: #31bc86;
+    background-color: #37474F;
     font-weight: bold;
     color: #fff;
     white-space: nowrap;

@@ -16,11 +16,11 @@ var Admins = sequelize.define('admins',
    }
 })
 
-
+/** 
 Admins.sync();
 
 var admins = Admins.create({username: "test", password: bcrypt.hashSync("test",null,null), type: "owner"});
 
 console.log("Created original admin");
-
+*/
 module.exports = Admins;
